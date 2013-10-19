@@ -10,5 +10,6 @@ tmp/*
 *.csv
 *.mat
 *.rar
+*.fig
 
 
