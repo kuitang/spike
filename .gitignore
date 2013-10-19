@@ -1,8 +1,14 @@
+# Mac OS X
+.DS_Store
+tmp/*
+
 # Python
 *.pyc
 
 # Data
 *.xls
 *.csv
+*.mat
+*.rar
 
 

@@ -1,4 +1,4 @@
-function plotStates(states, obs)
+function [Nstates] = plotStates(states, obs)
     T = length(states);
     assert(T == length(obs));
     
@@ -12,13 +12,16 @@ function plotStates(states, obs)
         lowStates(states == k) = i;
     end
 
-    colors = hsv(Nstates);    
+    colors = prism(Nstates);    
+    %colors = copper(Nstates);    
+
 
     figure;
     hold on;
     
+    stateStrs = {};
     for t = 1:T
-        scatter(t, obs(t), 8, colors(lowStates(t),:));
+        scatter(t, obs(t), 8, colors(lowStates(t),:), 'filled');        
     end
-    
+        
 end
